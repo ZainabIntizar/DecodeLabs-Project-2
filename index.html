@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Art of Fluidity — a responsive Front-End Development Project by Zainab Intizar.">
+  <title>The Art of Fluidity | DecodeLabs Project 2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="The Art of Fluidity home">
+        <span class="brand-mark">Z</span>
+        <span>Fluid<span>ity</span></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#principles">Principles</a>
+        <a href="#layout">Layout Lab</a>
+        <a href="#responsive">Responsive</a>
+        <a class="nav-cta" href="#resources">Resources</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse"></span> DecodeLabs · Project 02</p>
+          <h1>The Art of <span>Fluidity.</span></h1>
+          <p class="hero-lead">Building responsive architectures from the content out — layouts that adapt gracefully from the smallest phone to the widest screen.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#principles">Explore the system <span>↗</span></a>
+            <a class="btn btn-ghost" href="#responsive">See it respond</a>
+          </div>
+          <div class="hero-stats" aria-label="Project highlights">
+            <div><strong>01</strong><span>Mobile first</span></div>
+            <div><strong>02</strong><span>Grid + Flexbox</span></div>
+            <div><strong>03</strong><span>Fluid units</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb orb-back"></div>
+          <div class="device device-phone">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+              <div class="screen-line wide"></div>
+              <div class="screen-line"></div>
+              <div class="screen-card"></div>
+              <div class="screen-row"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="device device-tablet">
+            <div class="device-screen">
+              <div class="screen-line wide"></div>
+              <div class="screen-grid"><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="device device-desktop">
+            <div class="device-screen">
+              <div class="screen-line wide"></div>
+              <div class="screen-grid big"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="floating-tag tag-top">width: 100%</div>
+          <div class="floating-tag tag-bottom">@media · clamp()</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="principles">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 · Foundation</p>
+            <h2>Content is the <em>source of truth.</em></h2>
+          </div>
+          <p>Responsive design is not about squeezing a desktop page into a phone. It is about letting content guide the layout.</p>
+        </div>
+        <div class="principle-grid">
+          <article class="feature-card featured">
+            <div class="card-number">01</div>
+            <div class="water-icon">≈</div>
+            <h3>Like water, content flows.</h3>
+            <p>Flexible containers, relative units and intentional breakpoints let a page adapt instead of break.</p>
+            <div class="code-chip">max-width: 1200px;</div>
+          </article>
+          <article class="feature-card">
+            <div class="card-number">02</div>
+            <div class="mini-icon">▦</div>
+            <h3>Structure with Grid.</h3>
+            <p>Use two-dimensional Grid for the macro layout: sections, columns and page regions.</p>
+            <div class="code-chip">repeat(auto-fit, minmax(...))</div>
+          </article>
+          <article class="feature-card">
+            <div class="card-number">03</div>
+            <div class="mini-icon">↔</div>
+            <h3>Align with Flexbox.</h3>
+            <p>Use one-dimensional Flexbox for navigation, cards, controls and component-level alignment.</p>
+            <div class="code-chip">display: flex;</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section" id="layout">
+      <div class="container">
+        <div class="section-heading light">
+          <div>
+            <p class="eyebrow">02 · Layout Lab</p>
+            <h2>One system. <em>Many screens.</em></h2>
+          </div>
+          <p>These components are built with CSS Grid and Flexbox so the same content can reorganize naturally as the viewport changes.</p>
+        </div>
+        <div class="lab-grid">
+          <div class="lab-panel">
+            <div class="panel-head"><span>CSS GRID · MACRO</span><span class="dot-live">● live</span></div>
+            <div class="grid-demo">
+              <div class="demo-header">HEADER</div>
+              <div class="demo-side">SIDEBAR</div>
+              <div class="demo-main">
+                <div class="demo-card"><b>01</b><span>Content</span></div>
+                <div class="demo-card"><b>02</b><span>Content</span></div>
+                <div class="demo-card"><b>03</b><span>Content</span></div>
+              </div>
+              <div class="demo-footer">FOOTER</div>
+            </div>
+            <pre><code>.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1rem;
+}</code></pre>
+          </div>
+          <div class="lab-panel">
+            <div class="panel-head"><span>FLEXBOX · MICRO</span><span class="dot-live">● live</span></div>
+            <div class="flex-demo">
+              <div class="flex-pill"><span>01</span> Navigation</div>
+              <div class="flex-pill"><span>02</span> Components</div>
+              <div class="flex-pill"><span>03</span> Actions</div>
+            </div>
+            <div class="alignment-row"><span>justify-content</span><strong>space-between</strong></div>
+            <div class="alignment-row"><span>align-items</span><strong>center</strong></div>
+            <pre><code>.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="responsive">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">03 · Responsive strategy</p>
+            <h2>Design for <em>every viewport.</em></h2>
+          </div>
+          <p>Start small, then add space and complexity only when the content needs it. No fixed desktop assumptions.</p>
+        </div>
+        <div class="responsive-stage">
+          <div class="responsive-copy">
+            <div class="step active"><span>01</span><div><strong>Mobile first</strong><p>Simple stack, readable type, comfortable touch targets.</p></div></div>
+            <div class="step"><span>02</span><div><strong>Fluid expansion</strong><p>Grid columns and spacing grow with the available width.</p></div></div>
+            <div class="step"><span>03</span><div><strong>Content breakpoints</strong><p>Break only when the content starts feeling crowded.</p></div></div>
+          </div>
+          <div class="viewport-demo">
+            <div class="viewport-bar"><span></span><span></span><span></span><label>responsive-preview</label></div>
+            <div class="preview-inner">
+              <div class="preview-nav"><b>FLOW</b><i></i><i></i><i></i></div>
+              <div class="preview-hero"><span></span><div><b>Build once.</b><strong>Adapt everywhere.</strong><small>Fluid components for real devices.</small></div></div>
+              <div class="preview-cards"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+        <div class="tech-row">
+          <span>✓ meta viewport</span>
+          <span>✓ CSS media queries</span>
+          <span>✓ rem · % · vw</span>
+          <span>✓ clamp()</span>
+          <span>✓ Grid + Flexbox</span>
+          <span>✓ accessible focus</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resources-section" id="resources">
+      <div class="container resources-grid">
+        <div>
+          <p class="eyebrow">04 · Resources</p>
+          <h2>Keep learning. <em>Keep adapting.</em></h2>
+          <p class="resource-lead">A responsive mindset is a practice. Use trusted documentation to deepen your understanding of modern CSS.</p>
+          <div class="resource-links">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout" target="_blank" rel="noopener">MDN · CSS Grid <span>↗</span></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout" target="_blank" rel="noopener">MDN · Flexbox <span>↗</span></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp" target="_blank" rel="noopener">MDN · clamp() <span>↗</span></a>
+          </div>
+        </div>
+        <div class="quote-card">
+          <span class="quote-mark">“</span>
+          <p>Code for the device that <strong>hasn't been invented yet.</strong></p>
+          <span class="quote-line"></span>
+          <small>Responsive design principle</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div>
+        <a class="brand footer-brand" href="#home"><span class="brand-mark">Z</span><span>Fluid<span>ity</span></span></a>
+        <p>A responsive Front-End Development project created for DecodeLabs.</p>
+      </div>
+      <div class="footer-meta">
+        <span>DecodeLabs · Project 02</span>
+        <strong>Designed &amp; developed by Zainab Intizar.</strong>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Zainab Intizar</span>
+      <span>HTML · CSS · Responsive Design</span>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      links.classList.toggle('open', !open);
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        links.classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
