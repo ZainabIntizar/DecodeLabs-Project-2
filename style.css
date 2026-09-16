@@ -196,6 +196,21 @@ pre { margin: 22px 0 0; padding: 16px; overflow: auto; border-radius: 12px; back
     padding: 10px; border: 1px solid var(--line); border-radius: 16px;
     background: rgba(255,255,255,.97); box-shadow: var(--shadow);
   }
+    .feature-card {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-card .code-chip {
+    position: static !important;
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 20px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px 14px; border-radius: 10px; }
   .nav-cta { text-align: center; }
